@@ -1,17 +1,18 @@
-package com.blog.bolgblog;
+package com.blog.blog;
 
-import com.alibaba.nacos.spring.context.annotation.config.NacosPropertySource;
+import com.alibaba.nacos.api.config.annotation.NacosConfigurationProperties;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan("com.blog.bloguser.mapper")
-@NacosPropertySource(dataId = "blog-service.yaml", autoRefreshed = true)
-public class BolgBlogApplication {
-
+public class BlogApplication {
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
-        SpringApplication.run(BolgBlogApplication.class, args);
+        SpringApplication.run(BlogApplication.class, args);
     }
 
 }
